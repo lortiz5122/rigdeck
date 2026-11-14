@@ -14,6 +14,7 @@
 //!   --exit-after S              quit after S seconds
 
 mod app;
+mod donate;
 mod memories;
 mod theme;
 mod waterfall;

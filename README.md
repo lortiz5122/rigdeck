@@ -27,6 +27,15 @@ RigDeck is a native macOS control app for the **Icom IC-7300** (CI-V over USB) a
 
 Test status: the IC-7300 driver has been run against a real radio. The FT-991A driver is written from Yaesu's CAT manual and passes the simulator tests, but has **not yet been tried on a real FT-991A**. Reports from FT-991A owners are welcome (see [Contributing](#contributing)).
 
+## Support development
+
+RigDeck is free and open source, with no ads, no account and no subscription. It is built by a ham for the ham radio community. Donations pay for further development of the app: support for more radios, new features, fixes, and the time spent testing on real radios. The code stays free for every amateur. Any amount helps. Thank you, and 73!
+
+- **PayPal:** [pay $10 with PayPal](https://www.paypal.com/ncp/payment/PLB-6CEULH5Q3URL), or send any amount to ortizl@gmail.com
+- **Cash App:** [$lortiz1721](https://cash.app/$lortiz1721)
+
+The same buttons are in the app, in the sidebar under **Support RigDeck**.
+
 ## Requirements
 
 - macOS 13 or later. Developed and tested on Apple silicon.

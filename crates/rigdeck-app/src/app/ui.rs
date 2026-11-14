@@ -1,5 +1,5 @@
 //! Layout: a top bar with the frequency and S-meter, a sidebar of collapsible sections (radio,
-//! mode, bands, tuning, memories, transmit, scope, display, servers, clock), the spectrum and
+//! mode, bands, tuning, memories, transmit, scope, display, servers, clock, support, about), the spectrum and
 //! waterfall in the middle, and a status bar.
 
 use super::Wheel;
@@ -288,6 +288,7 @@ impl RigDeckApp {
                 }
             });
         }
+        section(ui, "Support RigDeck", true, crate::donate::section);
         section(ui, "About", false, |ui| {
             ui.label(format!("RigDeck {}", env!("CARGO_PKG_VERSION")));
             ui.label("Icom IC-7300 (CI-V) and Yaesu FT-991A (CAT). Written from the manufacturers' manuals.");
