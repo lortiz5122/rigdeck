@@ -1,0 +1,13 @@
+[package]
+name = "rigdeck-core"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+csv = "1.4.0"
+libc = "0.2.191"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+serialport = { version = "4.10.1", default-features = false, features = ["usbportinfo-interface"] }
+tungstenite = "0.30.0"

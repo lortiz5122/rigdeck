@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["crates/rigdeck-core", "crates/rigdeck-app", "crates/rigdeck-tools"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[profile.release]
+# Some rustup toolchains ship rust-objcopy without libLLVM, so cargo's default
+# debuginfo stripping aborts (and leaves crash reports). Keep symbols; the binary is small anyway.
+strip = false

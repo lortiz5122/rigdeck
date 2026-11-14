@@ -1,0 +1,8 @@
+[package]
+name = "rigdeck-tools"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+rigdeck-core = { version = "0.1.0", path = "../rigdeck-core" }

@@ -1,0 +1,99 @@
+{
+  "radio": "Yaesu FT-991A",
+  "protocol": "Yaesu CAT (ASCII)",
+  "source": "Yaesu FT-991A CAT Operation Reference Manual, file FT-991A_CAT_OM_ENG_1711-D.pdf (sha256 52164f73...0c95). Written fresh from that document.",
+  "frame": "two-letter command, fixed-width parameters, terminator ';' (pdf page 3). Read = command with no parameters; Answer = same layout as Set.",
+  "commands": [
+    {
+      "name": "auto_information",
+      "code": "AI",
+      "params": "P1 1 digit: 0 off, 1 on",
+      "access": "both",
+      "page": "pdf page 5"
+    },
+    {
+      "name": "frequency_vfo_a",
+      "code": "FA",
+      "params": "P1 9 digits Hz, 000030000-470000000",
+      "access": "both",
+      "page": "pdf page 10"
+    },
+    {
+      "name": "frequency_vfo_b",
+      "code": "FB",
+      "params": "P1 9 digits Hz",
+      "access": "both",
+      "page": "pdf page 10"
+    },
+    {
+      "name": "identification",
+      "code": "ID",
+      "params": "P1 4 digits, 0670 = FT-991A",
+      "access": "get",
+      "page": "pdf page 11"
+    },
+    {
+      "name": "information",
+      "code": "IF",
+      "params": "P1 3 ch, P2 9 freq, P3 5 clar, P4 rx clar, P5 tx clar, P6 mode, P7 vfo/mem, P8 ctcss, P9 2 fixed, P10 shift",
+      "access": "get",
+      "page": "pdf page 11"
+    },
+    {
+      "name": "memory_channel",
+      "code": "MC",
+      "params": "P1 3 digits 001-117",
+      "access": "both",
+      "page": "pdf page 12"
+    },
+    {
+      "name": "mode",
+      "code": "MD",
+      "params": "P1 0 (main), P2 1 LSB 2 USB 3 CW-U 4 FM 5 AM 6 RTTY-LSB 7 CW-L 8 DATA-LSB 9 RTTY-USB A DATA-FM B FM-N C DATA-USB D AM-N E C4FM",
+      "access": "both",
+      "page": "pdf page 12"
+    },
+    {
+      "name": "memory_read",
+      "code": "MR",
+      "params": "read MR P0(3); answer MR + same layout as IF",
+      "access": "get",
+      "page": "pdf page 13"
+    },
+    {
+      "name": "memory_write_tag",
+      "code": "MT",
+      "params": "P1 3 ch, P2 9 freq, P3 5 clar, P4, P5, P6 mode, P7 0, P8 ctcss, P9 00, P10 shift, P11 0, P12 12-char tag",
+      "access": "both",
+      "page": "pdf page 13"
+    },
+    {
+      "name": "power_control",
+      "code": "PC",
+      "params": "P1 3 digits 005-100 W",
+      "access": "both",
+      "page": "pdf page 15"
+    },
+    {
+      "name": "read_meter",
+      "code": "RM",
+      "params": "P1 meter (1 S, 4 ALC, 5 PO, 6 SWR), P2 3 digits 000-255",
+      "access": "get",
+      "page": "pdf page 16"
+    },
+    {
+      "name": "s_meter",
+      "code": "SM",
+      "params": "P1 0, P2 3 digits 000-255",
+      "access": "get",
+      "page": "pdf page 18"
+    },
+    {
+      "name": "tx_set",
+      "code": "TX",
+      "params": "P1 0 RX, 1 radio TX (answer only), 2 CAT TX",
+      "access": "both",
+      "page": "pdf page 18"
+    }
+  ]
+}
