@@ -4,6 +4,8 @@
 
 RigDeck is a native macOS control app for the **Icom IC-7300** (CI-V over USB) and the **Yaesu FT-991A** (CAT over USB). It gives your radio a live spectrum scope and GPU waterfall you can click to tune, a full control panel, a memory editor, and a rigctld server for WSJT-X and loggers. It is written in Rust from the manufacturers' published command documentation and is MIT licensed.
 
+![RigDeck connected to an IC-7300: frequency, S-meter, sidebar controls, spectrum scope and waterfall](docs/screenshots/rigdeck-ic7300.png)
+
 ## What it does
 
 | Feature | IC-7300 | FT-991A |
@@ -26,6 +28,19 @@ RigDeck is a native macOS control app for the **Icom IC-7300** (CI-V over USB) a
 | 16 themes, including a red night-vision theme, and an interface size setting | yes | yes |
 
 Test status: the IC-7300 driver has been run against a real radio. The FT-991A driver is written from Yaesu's CAT manual and passes the simulator tests, but has **not yet been tried on a real FT-991A**. Reports from FT-991A owners are welcome (see [Contributing](#contributing)).
+
+## Screenshots
+
+All screenshots use the built-in radio simulators and sample memory channels.
+
+| | |
+|---|---|
+| ![Memory editor reading the IC-7300's channels](docs/screenshots/rigdeck-memories.png) | ![FT-991A in the Light theme](docs/screenshots/rigdeck-ft991a.png) |
+| Memory editor: read, edit, import and write channels, with a backup before every write | Yaesu FT-991A in the Light theme (the FT-991A does not send its scope over CAT) |
+
+![Midnight blue theme with the whole sidebar, including Support RigDeck](docs/screenshots/rigdeck-support.png)
+
+Midnight blue theme, showing the whole sidebar and the **Support RigDeck** section with the PayPal and Cash App buttons.
 
 ## Support development
 
