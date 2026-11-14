@@ -2,9 +2,9 @@
 
 use eframe::egui;
 
-/// PayPal payment page set up by the author (a $10 payment).
-pub const PAYPAL_URL: &str = "https://www.paypal.com/ncp/payment/PLB-6CEULH5Q3URL";
-/// PayPal account, for sending another amount from the PayPal app or website.
+/// PayPal Donate page for the author's account (PayPal merchant ID), where the donor types the amount.
+pub const PAYPAL_URL: &str = "https://www.paypal.com/donate/?business=7TR6E8QGX7YMJ&currency_code=USD&item_name=RigDeck%20development";
+/// PayPal account, shown as text for donors who prefer to send from the PayPal app.
 pub const PAYPAL_ACCOUNT: &str = "ortizl@gmail.com";
 /// Cash App $Cashtag.
 pub const CASHTAG: &str = "$lortiz1721";
@@ -39,9 +39,7 @@ pub fn section(ui: &mut egui::Ui) {
     });
     let weak = ui.visuals().weak_text_color();
     let small = |t: String| egui::RichText::new(t).size(11.0).color(weak);
-    ui.label(small(format!(
-        "The PayPal button opens a $10 payment. For another amount, send it in PayPal to {PAYPAL_ACCOUNT}. Cash App: {CASHTAG}."
-    )));
+    ui.label(small(format!("Give any amount you like. PayPal: {PAYPAL_ACCOUNT} · Cash App: {CASHTAG}")));
     ui.label(THANKS);
 }
 
@@ -52,6 +50,8 @@ mod tests {
     #[test]
     fn donation_links_point_at_paypal_and_cash_app() {
         assert_eq!(cash_app_url(), "https://cash.app/$lortiz1721");
-        assert!(PAYPAL_URL.starts_with("https://www.paypal.com/"));
+        // The Donate page lets the donor choose the amount; a fixed-amount link must not come back.
+        assert!(PAYPAL_URL.starts_with("https://www.paypal.com/donate/?business="));
+        assert!(!PAYPAL_URL.contains("amount="));
     }
 }
