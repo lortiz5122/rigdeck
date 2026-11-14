@@ -291,6 +291,7 @@ impl RigDeckApp {
         section(ui, "Support RigDeck", true, crate::donate::section);
         section(ui, "About", false, |ui| {
             ui.label(format!("RigDeck {}", env!("CARGO_PKG_VERSION")));
+            ui.label(format!("Developer: {}", crate::donate::DEVELOPER_CALL));
             ui.label("Icom IC-7300 (CI-V) and Yaesu FT-991A (CAT). Written from the manufacturers' manuals.");
             ui.label(format!("Memory backups: {}", backup_dir().display()));
         });

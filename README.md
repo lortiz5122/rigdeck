@@ -29,7 +29,7 @@ Test status: the IC-7300 driver has been run against a real radio. The FT-991A d
 
 ## Support development
 
-RigDeck is free and open source, with no ads, no account and no subscription. It is built by a ham for the ham radio community. Donations pay for further development of the app: support for more radios, new features, fixes, and the time spent testing on real radios. The code stays free for every amateur. Any amount helps. Thank you, and 73!
+RigDeck is free and open source, with no ads, no account and no subscription. It is built by K1ORT for the ham radio community. Donations pay for further development of the app: support for more radios, new features, fixes, and the time spent testing on real radios. The code stays free for every amateur. Any amount helps. Thank you, and 73 de K1ORT!
 
 - **PayPal:** [pay $10 with PayPal](https://www.paypal.com/ncp/payment/PLB-6CEULH5Q3URL), or send any amount to ortizl@gmail.com
 - **Cash App:** [$lortiz1721](https://cash.app/$lortiz1721)

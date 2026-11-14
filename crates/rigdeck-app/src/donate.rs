@@ -15,12 +15,15 @@ pub fn cash_app_url() -> String {
 }
 
 pub const WHY: &str = "RigDeck is free and open source (MIT licence), with no ads, no account and no subscription. \
-It is built by a ham for the ham radio community.";
+It is built by K1ORT for the ham radio community.";
 
 pub const WHAT_IT_PAYS_FOR: &str = "Donations pay for further development of the app: support for more radios, \
 new features, fixes, and the time spent testing on real radios. The code stays free for every amateur.";
 
-pub const THANKS: &str = "Any amount helps. Thank you, and 73!";
+pub const THANKS: &str = "Any amount helps. Thank you, and 73 de K1ORT!";
+
+/// The developer's amateur radio call sign.
+pub const DEVELOPER_CALL: &str = "K1ORT";
 
 pub fn section(ui: &mut egui::Ui) {
     ui.label(WHY);
